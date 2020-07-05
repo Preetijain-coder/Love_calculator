@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+body
+{
+background-image:url(download.jpg);
+}
+
+div{
+background-color:white;
+border:2px solid yellow;
+margin: 150px 300px;
+padding:50px;
+width:280px;
+height:150px;
+outline-style:dashed;
+outline-color: red ;
+outline-width:thin;
+}
+.demo{
+background-color:red;
+border:0px solid white;
+margin-top:-49px;
+margin-left:-50px;
+font-size:20px;
+color:white;
+width:380px;
+}
+input
+{
+
+margin-left:80px;
+color:red;
+font-weight:bold;
+
+}
+.btn{
+	background-color:green;
+	color:white;
+	width:200px;
+	margin-left:50px;
+}
+.footer{
+	margin-top:10px;
+}
+</style>
+</head>
+<body>
+<div><p align="center" class ="demo"><b>Love Calculator</b></p>
+<form><input type="text" name="lv"  placeholder="Your name"><p align="center">+</p>
+<input type="text" placeholder="Love name" name="lvr">
+<br/><br/><input type="button"value="click me" class="btn" onclick="checkLove()"></button>
+<br/><br/><input type="text"  placeholder="Love percentaage" id="lovevalue">
+<p align="center" class ="demo footer"><b>Best Of Luck Your Relationship</b></p>
+</div>
+<script>
+	function checkLove()
+{
+	var x=document.getElementsByTagName("input");
+	if(x[1].value.length==0||x[2].value.length==0)
+	{
+		alert("Enter a name");
+	}
+	else
+        {
+		var love=Math.random()*100;
+		love=Math.floor(love);
+		document.getElementById("lovevalue").value=love +"%";
+         }
+}
+</script>
+</body>
+</html>
